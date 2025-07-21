@@ -5,7 +5,7 @@ const http = require('http');
 // createServer method takes a callback function -> request listener
 // createServer method returns an instance of the server
 const server = http.createServer((request, response) => {
-    response.end('Hello, NodeJS!');
+    response.end('Hello, Node APP!');
 });
 
 // listen on port 3001

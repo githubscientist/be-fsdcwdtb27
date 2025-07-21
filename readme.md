@@ -52,3 +52,10 @@
 - This will make it difficult to manage routes, middleware, and other functionalities. Also, it is not easily maintainable and scalable.
 - Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications.
 - It simplifies the process of building web applications by providing a set of tools and utilities that make it easier to handle routing, middleware, and other common tasks.
+
+### Version Number
+
+- The version number of a package is specified in the `package.json` file.
+- First part: Major version - Indicates a significant change that may break backward compatibility.
+- Second part: Minor version - Indicates the addition of new features that are backward compatible.
+- Third part: Patch version - Indicates bug fixes that are backward compatible.
