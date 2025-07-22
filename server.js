@@ -6,7 +6,7 @@ const app = express();
 
 // configure the routes for the application
 app.get('/', (request, response) => {
-    response.json({ message: 'Welcome to the Express Application!' })
+    response.json({ message: 'Hello, ExpressJS!' });
 });
 
 // run the application

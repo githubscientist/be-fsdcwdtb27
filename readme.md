@@ -68,3 +68,15 @@
 4. the server.js file should have the following code:
 5. run `npm init` to create a `package.json` file from the terminal.
 6. Run the application using `npm run start` command.
+
+### nodemon
+
+- Nodemon is a utility that monitors for changes in your source code and automatically restarts your server.
+- It is useful during development as it saves you from manually restarting the server every time you make changes to your code.
+- To use nodemon, you can install it as a dev dependency in your project using `npm install --save-dev nodemon`.
+- You can then run your application using `nodemon server.js` instead of `node server.js`.
+
+### Dependencies and Dev Dependencies
+
+- **Dependencies**: These are packages that your application needs to run in production. They are listed under the "dependencies" section in the `package.json` file.
+- **Dev Dependencies**: These are packages that are only needed during development, such as testing frameworks, build tools, and development utilities. They are listed under the "devDependencies" section in
