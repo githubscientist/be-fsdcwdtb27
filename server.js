@@ -1,14 +1,18 @@
 // import the express module
 const express = require('express');
+const logger = require('./utils/logger');
 
 // create an instance or application of express
 const app = express();
 
-app.use(express.json()); // middleware to parse JSON bodies
+// middleware to parse JSON bodies
+app.use(express.json());
+
+// import the logger middleware
+app.use(logger);
 
 // configure the routes for the application
 app.get('/', (request, response) => {
-    console.log(request.body);
     response.json({ message: 'Hello, Root!' });
 });
 
