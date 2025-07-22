@@ -1,14 +1,15 @@
-// import the http module
-const http = require('http');
+// import the express module
+const express = require('express');
 
-// create a server
-// createServer method takes a callback function -> request listener
-// createServer method returns an instance of the server
-const server = http.createServer((request, response) => {
-    response.end('Hello, Node APP!');
+// create an instance or application of express
+const app = express();
+
+// configure the routes for the application
+app.get('/', (request, response) => {
+    response.json({ message: 'Welcome to the Express Application!' })
 });
 
-// listen on port 3001
-server.listen(3001, 'localhost', () => {
-    console.log('Server is running on http://localhost:3001');
+// run the application
+app.listen(3001, () => {
+    console.log(`Server is running on http://localhost:3001`);
 });

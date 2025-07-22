@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Backend application for FSDCWDTB27.",
   "main": "server.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/githubscientist/be-fsdcwdtb27/issues"
   },
-  "homepage": "https://github.com/githubscientist/be-fsdcwdtb27#readme"
+  "homepage": "https://github.com/githubscientist/be-fsdcwdtb27#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }

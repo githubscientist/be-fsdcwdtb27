@@ -59,3 +59,12 @@
 - First part: Major version - Indicates a significant change that may break backward compatibility.
 - Second part: Minor version - Indicates the addition of new features that are backward compatible.
 - Third part: Patch version - Indicates bug fixes that are backward compatible.
+
+### To Setup Backend Application:
+
+1. Create an empty directory for your project.
+2. Open the directory in vs code.
+3. create a file named `server.js`, the entry point of your application.
+4. the server.js file should have the following code:
+5. run `npm init` to create a `package.json` file from the terminal.
+6. Run the application using `npm run start` command.
