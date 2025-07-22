@@ -1,6 +1,7 @@
 // import the express module
 const express = require('express');
 const logger = require('./utils/logger');
+const errorRoute = require('./utils/errorRoute');
 
 // create an instance or application of express
 const app = express();
@@ -15,6 +16,9 @@ app.use(logger);
 app.get('/', (request, response) => {
     response.json({ message: 'Hello, Root!' });
 });
+
+// import the error handling middleware
+app.use(errorRoute);
 
 // run the application
 app.listen(3001, () => {

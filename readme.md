@@ -84,3 +84,22 @@
 ### Middleware
 
 - Middleware is a function that has access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+
+### Status Codes
+
+- 1xx: Informational responses
+- 2xx: Success
+- 3xx: Redirection
+- 4xx: Client errors
+- 5xx: Server errors
+- Common status codes include:
+  - 200: OK
+  - 201: Created
+  - 204: No Content
+  - 400: Bad Request
+  - 401: Unauthorized
+  - 403: Forbidden
+  - 404: Not Found
+  - 500: Internal Server Error
+  - 503: Service Unavailable
+  - 502: Bad Gateway
