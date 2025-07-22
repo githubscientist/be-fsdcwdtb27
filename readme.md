@@ -80,3 +80,7 @@
 
 - **Dependencies**: These are packages that your application needs to run in production. They are listed under the "dependencies" section in the `package.json` file.
 - **Dev Dependencies**: These are packages that are only needed during development, such as testing frameworks, build tools, and development utilities. They are listed under the "devDependencies" section in
+
+### Middleware
+
+- Middleware is a function that has access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
