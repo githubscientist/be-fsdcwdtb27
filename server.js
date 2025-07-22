@@ -6,7 +6,27 @@ const app = express();
 
 // configure the routes for the application
 app.get('/', (request, response) => {
-    response.json({ message: 'Hello, ExpressJS!' });
+    response.json({ message: 'Hello, Root!' });
+});
+
+app.get('/test', (request, response) => {
+    response.json({ message: 'GET, Test!' });
+});
+
+app.post('/test', (request, response) => {
+    response.json({ message: 'POST, Test!' });
+});
+
+app.put('/test', (request, response) => {
+    response.json({ message: 'PUT, Test!' });
+});
+
+app.patch('/test', (request, response) => {
+    response.json({ message: 'PATCH, Test!' });
+});
+
+app.delete('/test', (request, response) => {
+    response.json({ message: 'DELETE, Test!' });
 });
 
 // run the application
