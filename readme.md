@@ -103,3 +103,12 @@
   - 500: Internal Server Error
   - 503: Service Unavailable
   - 502: Bad Gateway
+
+### What is MVC?
+
+- MVC is a software architectural pattern that separates an application into three main components:
+  - Model: Represents the data and business logic of the application.
+  - View: Represents the user interface and presentation layer.
+  - Instead of View in Backend, We use Routes:
+    - Routes handle incoming requests and define how the application responds to different endpoints.
+  - Controller: Acts as an intermediary between the Model and the Routes, processing requests, interacting with the Model, and returning responses to the Routes.
