@@ -112,3 +112,9 @@
   - Instead of View in Backend, We use Routes:
     - Routes handle incoming requests and define how the application responds to different endpoints.
   - Controller: Acts as an intermediary between the Model and the Routes, processing requests, interacting with the Model, and returning responses to the Routes.
+
+### API Versioning
+
+- API versioning is the practice of managing changes to an API over time.
+- It allows developers to introduce new features or changes without breaking existing clients.
+- URL versioning: Including the version number in the URL (e.g., `/api/v1/resource`).

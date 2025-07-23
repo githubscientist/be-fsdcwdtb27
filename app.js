@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(logger);
 
 // configure the routes for the application
-app.use('/todos', todoRouter);
+app.use('/api/v1/todos', todoRouter);
 
 // import the error handling middleware
 app.use(errorRoute);
