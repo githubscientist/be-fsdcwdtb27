@@ -32,6 +32,19 @@ const todoController = {
 
         // send the newly created todo as a response
         res.status(201).json(newTodo);
+    },
+    updateTodo: async (req, res) => {
+        // get the id from the request parameters
+        const { id } = req.params;
+
+        // get the updated content from the request body
+        const { content } = req.body;
+
+        // find the todo by id and update it
+        await Todo.findByIdAndUpdate(id, { content });
+
+        // send a success response
+        res.status(200).json({ message: "Todo updated successfully" });
     }
 }
 
