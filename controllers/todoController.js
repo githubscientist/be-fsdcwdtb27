@@ -18,6 +18,20 @@ const todoController = {
 
         // send the todo as a response
         res.status(200).json(todo);
+    },
+    createTodo: async (req, res) => {
+        const { content } = req.body;
+
+        // create a new todo object or instance
+        const newTodo = new Todo({
+            content,
+            isCompleted: false,
+        });
+
+        await newTodo.save();
+
+        // send the newly created todo as a response
+        res.status(201).json(newTodo);
     }
 }
 
