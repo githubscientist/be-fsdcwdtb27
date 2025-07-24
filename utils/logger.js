@@ -1,5 +1,5 @@
 // import the file system module
-const fs = require('fs');
+// const fs = require('fs');
 
 const logger = (req, res, next) => {
     console.log(`Request Method: ${req.method}`);

@@ -7,11 +7,17 @@ const todoController = {
         const todos = await Todo.find();
 
         // send the todos as a response
-        res
-            .status(200)
-            .send({
-                todos: todos,
-            });
+        res.status(200).json(todos);
+    },
+    getTodoById: async (req, res) => {
+        // Get the ID from the request parameters
+        const { id } = req.params;
+
+        // find the todo by ID in the database
+        const todo = await Todo.findById(id);
+
+        // send the todo as a response
+        res.status(200).json(todo);
     }
 }
 

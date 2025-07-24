@@ -118,3 +118,15 @@
 - API versioning is the practice of managing changes to an API over time.
 - It allows developers to introduce new features or changes without breaking existing clients.
 - URL versioning: Including the version number in the URL (e.g., `/api/v1/resource`).
+
+### API Requests
+
+GET /todos - Retrieve a list of all todos.
+GET /todos/:id - Retrieve a specific todo by ID.
+POST /todos - Create a new todo.
+PUT /todos/:id - Update an existing todo by ID.
+DELETE /todos/:id - Delete a specific todo by ID.
+
+
+### URL: Uniform Resource Locator
+### URI: Uniform Resource Identifier
