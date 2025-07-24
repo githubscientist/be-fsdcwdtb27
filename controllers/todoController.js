@@ -45,6 +45,16 @@ const todoController = {
 
         // send a success response
         res.status(200).json({ message: "Todo updated successfully" });
+    },
+    deleteTodo: async (req, res) => {
+        // get the id from the request parameters
+        const { id } = req.params;
+
+        // find the todo by id and delete it
+        await Todo.findByIdAndDelete(id);
+
+        // send a success response
+        res.status(200).json({ message: "Todo deleted successfully" });
     }
 }
 
