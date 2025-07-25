@@ -3,6 +3,7 @@ const express = require('express');
 const logger = require('./utils/logger');
 const errorRoute = require('./utils/errorRoute');
 const todoRouter = require('./routes/todoRouter');
+const authRouter = require('./routes/authRouter');
 
 // create an instance or application of express
 const app = express();
@@ -15,6 +16,7 @@ app.use(logger);
 
 // configure the routes for the application
 app.use('/api/v1/todos', todoRouter);
+app.use('/api/v1/auth', authRouter);
 
 // import the error handling middleware
 app.use(errorRoute);
