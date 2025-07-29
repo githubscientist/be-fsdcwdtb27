@@ -127,6 +127,31 @@ POST /todos - Create a new todo.
 PUT /todos/:id - Update an existing todo by ID.
 DELETE /todos/:id - Delete a specific todo by ID.
 
-
 ### URL: Uniform Resource Locator
+
 ### URI: Uniform Resource Identifier
+
+### Forgot Password reset flow
+
+1. Forgot password page -> user enters email and clicks submit.
+2. calls /forgot-password endpoint {with email in body}
+3. In the route ->
+   - validate email
+   - generate a random string
+   - store the random string in the database.
+   - create a link with the random string /reset-password/:randomString
+   - send an email to the user with the reset link.
+4. User clicks the link in the email.
+5. Redirects to the reset password page with the random string in the URL.
+6. Inside the route,
+
+- we get the random string from the url.
+- validate the random string with the one stored in the database.
+- if valid, render the confirm password change page.
+
+7. User enters the new password and clicks submit.
+8. In the route,
+   - validate the new password.
+   - hash the new password.
+   - update the user password in the database.
+9. Redirect the user to the login page with a success message.

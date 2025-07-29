@@ -7,11 +7,16 @@ const auth = require('../middlewares/auth');
 const todoRouter = express.Router();
 
 // manage the routes for todos
-todoRouter.get('/', auth.isAuthenticated, getAllTodos);
+// Public Routes
+todoRouter.get('/', getAllTodos);
 todoRouter.get('/:id', getTodoById);
-todoRouter.post('/', createTodo);
-todoRouter.put('/:id', updateTodo);
-todoRouter.delete('/:id', deleteTodo);
+
+// Authenticated Routes
+todoRouter.post('/', auth.isAuthenticated, createTodo);
+
+// Protected Routes: Allowed Roles: Admin
+todoRouter.put('/:id', auth.isAuthenticated, auth.allowRoles(['admin']), updateTodo);
+todoRouter.delete('/:id', auth.isAuthenticated, auth.allowRoles(['admin']), deleteTodo);
 
 // export the todoRouter instance
 module.exports = todoRouter;
