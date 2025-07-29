@@ -58,8 +58,15 @@ const authController = {
             // generate a JWT token
             const token = jwt.sign({ id: user[0]._id }, JWT_SECRET, { expiresIn: '1h' });
 
+            // set the token as a http-only cookie
+            res.cookie('token', token, {
+                httpOnly: true,
+                secure: false,
+                sameSite: 'Strict',
+            })
+
             // send a success response
-            res.status(200).json({ message: 'Login successful', token: token });
+            res.status(200).json({ message: 'Login successful' });
         } catch (error) {
             res.status(500).json({ message: 'Login failed', error: error.message });
         }
@@ -81,6 +88,17 @@ const authController = {
             res.status(200).json({ user: { id: user._id, name: user.name, email: user.email } });
         } catch (error) {
             res.status(500).json({ message: 'Error fetching user data', error: error.message });
+        }
+    },
+    logout: async (req, res) => {
+        try {
+            // clear the token cookie
+            res.clearCookie('token');
+
+            // send a success response
+            res.status(200).json({ message: 'Logout successful' });
+        } catch (error) {
+            res.status(500).json({ message: 'Logout failed', error: error.message });
         }
     }
 }
